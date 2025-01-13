@@ -1,0 +1,23 @@
+﻿@model AcunMedyaPortfolioProject.Models.Contact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Bağlantı Güncelleme Sayfası</h2>
+
+<div class="container">
+    <form method="post">
+        @Html.HiddenFor(x => x.Id)
+        <label>Telefon</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        <br />
+        <label>Mail Adresi</label>
+        @Html.TextBoxFor(x => x.MailAdress, new { @class = "form-control" })
+        <br />
+        <label>Adres</label>
+        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Bağlantılarımı Güncelle</button>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+﻿﻿@model List<AcunMedyaPortfolioProject.Models.SocialMedia>
+
+
+<ul class="intro-social">
+
+    @foreach (var item in Model)
+    {
+        <li><a href="@item.Link">@item.Platform</a></li>
+    }
+
+</ul>

@@ -1,0 +1,36 @@
+﻿@Model List<AcunMedyaPortfolioProject.Models.Contact>
+    @{
+        ViewBag.Title = "ContactList";
+        Layout = "~/Views/AdminLayout/Index.cshtml";
+    }
+    <h2>İletişim Bilgileri</h2>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">İletişim Yönetimi</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Telefon</th>
+                    <th>Mail</th>
+                    <th>Adres</th>
+                    <th>Güncelle</th>
+                    <th>Kaldır</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model)
+                {
+                    <tr>
+                        <td>@contact.Id</td>
+                        <td>@contact.Phone</td>
+                        <td>@contact.MailAdress</td>
+                        <td>@contact.Adress</td>
+                        <td><a href="/Contact/UpdateContact/@contact.Id" class="btn btn-success">Güncelle</a></td>
+                        <td><a href="/Contact/DeleteContact/@contact.Id" class="btn btn-danger">Kaldır</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Contact/CreateContact" class="btn btn-primary">Yeni Bağlantı Ekle</a>
+    </div>

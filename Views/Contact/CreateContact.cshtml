@@ -1,0 +1,22 @@
+﻿@model AcunMedyaPortfolioProject.Models.Contact
+@{
+    ViewBag.Title = "CreateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>İletişim</h2>
+
+<div class="container">
+    <form method="post">
+        <label>Telefon</label>
+        <input type="text" name="Phone" class="form-control" />
+        <br />
+        <label>Mail Adresi</label>
+        <input type="text" name="MailAdress" class="form-control" />
+        <br />
+        <label>Adres</label>
+        <input type="text" name="Adress" class="form-control" />
+        <br />
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+</div>

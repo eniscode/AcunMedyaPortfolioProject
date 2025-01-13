@@ -1,0 +1,39 @@
+﻿@model AcunMedyaPortfolioProject.Models.Testimonial
+
+@{
+    ViewBag.Title = "Testimonial Güncelle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <h2>Yorum Güncelle Güncelle</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="NameSurname">İsim Soyisim</label>
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", placeholder = "İsim ve Soyisim giriniz" })
+        </div>
+
+        <div class="form-group">
+            <label for="Title">Başlık</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Başlık giriniz" })
+        </div>
+
+        <div class="form-group">
+            <label for="Comment">Açıklama</label>
+            @Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = 5, placeholder = "Yorum/Açıklama giriniz" })
+        </div>
+
+        <div class="form-group">
+            <label for="ImageUrl">Resim URL</label>
+            @Html.TextBoxFor(x => x.İmageUrl, new { @class = "form-control", placeholder = "Resim URL'si giriniz" })
+        </div>
+
+        <div class="form-group">
+            <label for="Job">Meslek</label>
+            @Html.TextBoxFor(x => x.Job, new { @class = "form-control", placeholder = "Meslek giriniz" })
+        </div>
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+        <a href="/Testimonial/Index" class="btn btn-secondary">Geri Dön</a>
+    </form>
+</div>

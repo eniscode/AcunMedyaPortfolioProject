@@ -1,0 +1,40 @@
+﻿﻿<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 Tüm Hakları Saklıdır. | Portfölyo Sayfası</p>
+
+    <div class="categories">
+        <h5>Kategoriler</h5>
+        <div class="category-list">
+            @foreach (var category in ViewBag.Categories as List<AcunMedyaPortfolioProject.Models.Category>)
+            {
+                <span class="category-item">@category.Name</span> <!-- Kategoriyi kutucuk olarak göster -->
+            }
+        </div>
+    </div>
+</footer>
+
+<style>
+    .category-list {
+        display: flex; /* Flexbox kullanarak yatay sıralama */
+        justify-content: flex-start; /* Sol tarafta hizalama */
+        flex-wrap: wrap; /* Ekran boyutuna göre birden fazla satıra geçebilir */
+        gap: 15px; /* Kategoriler arasında boşluk */
+        margin-left: 20px; /* Sol taraftan 20px boşluk bırakıyoruz */
+    }
+
+    .category-item {
+        font-size: 16px; /* Yazı boyutunu ayarlıyoruz */
+        color: #333; /* Yazı rengi */
+        padding: 8px 20px; /* Kutunun içindeki boşluk */
+        border: 2px solid #ddd; /* Hafif gri renkli kenarlık */
+        border-radius: 25px; /* Yuvarlatılmış köşeler */
+        background-color: #f8f8f8; /* Hafif gri arka plan */
+        cursor: pointer; /* Yazının üzerine gelindiğinde işaretçi simgesi */
+        transition: all 0.3s ease; /* Yumuşak geçiş efekti */
+    }
+
+        .category-item:hover {
+            background-color: #3498db; /* Hover durumunda mavi arka plan */
+            color: white; /* Hover durumunda yazı rengi beyaz olur */
+            border-color: #2980b9; /* Hover durumunda kenarlık rengi mavi olur */
+        }
+</style>

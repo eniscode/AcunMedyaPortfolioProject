@@ -1,0 +1,11 @@
+﻿﻿@model List<AcunMedyaPortfolioProject.Models.SocialMedia>
+<div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+    <h3 class="text-pretitle">Sosyal Medya Hesaplarım</h3>
+
+    <ul class="contact-social">
+        @foreach (var item in Model)
+        {
+            <li><a href="@item.Link">@item.Platform</a></li>
+        }
+    </ul>
+</div>

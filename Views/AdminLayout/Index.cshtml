@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<!doctype html>
+<html lang="en">
+@Html.Action("PartialHead", "AdminLayout")
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        @Html.Action("PartialSidebar", "AdminLayout")
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+
+            @RenderBody()
+
+          
+        </div>
+    </div>
+
+  @Html.Action("PartialScripts", "AdminLayout")
+</body>
+</html>
+

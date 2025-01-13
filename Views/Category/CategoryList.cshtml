@@ -1,0 +1,44 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.Category>
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Categori Listesi</h2>
+
+<div class="container">
+    <!-- Ortalama işlemi -->
+
+    <table class="table table-bordered">
+        <!-- Excel tablosu gibi görünüm. -->
+        <thead>
+            <!-- Tablo başlıkları -->
+            <tr>
+                <!-- tr = satır -->
+                <th>Id</th><!-- th= Başlık etiketi  -->
+                <th> Kategori İsmi </th>
+                <th> Güncelle </th>
+                <th> Kaldır </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <!-- Ana Kısım. -->
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td> @category.Id </td>
+                    <td> @category.Name </td>
+                    <td> <a href="/Category/UpdateCategory/@category.Id" class="btn btn-success">Güncelle</a>
+                    <td>
+                    <td> <a href="/Category/DeleteCategory/@category.Id" class="btn btn-danger">Kaldır</a>
+                    <td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Category/CreateCategory" class="btn btn-primary">Yeni Kategori Ekle </a>
+</div>
+

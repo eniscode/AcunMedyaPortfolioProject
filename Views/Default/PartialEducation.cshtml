@@ -1,0 +1,29 @@
+﻿﻿@model List<AcunMedyaPortfolioProject.Models.Education>
+<div class="column lg-6 tab-12">
+
+    <h2 class="text-pretitle" data-animate-el>
+        Eğitim Geçmişi
+    </h2>
+
+    <div class="timeline" data-animate-el>
+        @foreach (var item in Model)
+        {
+            <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                <div class="timeline__header">
+                    <h4 class="timeline__title">
+                        @item.InstutionName
+                    </h4>
+                    <h5 class="timeline__meta">@item.Title</h5>
+                    <p class="timeline__timeframe">@item.StartDate.Value.ToString("MMMM yyyy")-@item.EndDate.Value.ToString("MMMM yyyy")</p>
+                </div>
+                <div class="timeline__desc">
+                    <p>@item.Description</p>
+                </div>
+            </div>
+        }
+
+
+    </div> <!-- end timeline -->
+
+</div>

@@ -1,0 +1,93 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+@Html.Action("PartialHead")
+
+<body id="top">
+
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- ## site header
+        ================================================== -->
+       @Html.Action("PartialSiteHeader")
+        <!-- ## main content
+        ==================================================- -->
+    <main class="s-content">
+
+
+        <!-- ### intro
+    ================================================== -->
+        @Html.Action("PartialIntro")
+        <!-- ### about
+    ================================================== -->
+        
+        <section id="about" class="s-about target-section">
+
+            @Html.Action("PartialAbout")
+
+
+          @Html.Action("PartialExpertise")
+
+            <div class="row about-timelines" data-animate-block>
+
+                @Html.Action("PartialExperience")
+
+                @Html.Action("PartialEducation")
+
+
+            </div> <!-- end about-timelines -->
+
+        </section> <!-- end s-about -->
+        <!-- ### works
+    ================================================== -->
+        <section id="works" class="s-works target-section">
+
+
+            @Html.Action("PartialProject")
+            <!-- end works-portfolio -->
+
+            @Html.Action("PartialTestimonial")
+            <!-- end row testimonials -->
+
+        </section> <!-- end s-works -->
+        <!-- ### contact
+    ================================================== -->
+        @Html.Action("PartialContact")
+        <!-- end contact -->
+
+    </main> <!-- end s-content -->
+        <!-- ## footer
+        ================================================== -->
+      @Html.Action("PartialFooter")
+
+    </div> <!-- end -s-pagewrap -->
+    <!-- Java Script
+    ================================================== -->
+  @Html.Action("PartialScripts")
+
+</body>
+</html>

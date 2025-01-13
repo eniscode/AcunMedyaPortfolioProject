@@ -1,0 +1,32 @@
+﻿@model AcunMedyaPortfolioProject.Models.Project
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Proje güncelleme sayfası</h2>
+<div class="container">
+    <form method="post">
+        @Html.HiddenFor(x => x.Id)
+        <label>Proje Adı</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        <label>Kategori</label>
+        @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.Categories, "Kategori Seçin", new { @class = "form-control" })
+        <label>Kapak Urlsi</label>
+        @Html.TextBoxFor(x => x.ConvertİmageUrl, new { @class = "form-control" })
+        <br />
+        <label>Açıklama</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        <br />
+        <label>Proje Linki</label>
+        @Html.TextBoxFor(x => x.ProjectLink, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Projeyi Güncelle</button>
+
+    </form>
+
+</div>
+
+
+

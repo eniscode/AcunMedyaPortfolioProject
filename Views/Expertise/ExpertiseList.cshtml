@@ -1,0 +1,33 @@
+﻿﻿@model List<AcunMedyaPortfolioProject.Models.Expertise>
+@{
+    ViewBag.Title = "ExpertiseList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>ExpertiseList</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uzmanlık Alanı</th>
+                <th>Güncelle</th>
+                <th>Kaldır</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var expertise in Model)
+            {
+                <tr>
+                    <td>@expertise.ExpertiseId</td>
+                    <td>@expertise.Title</td>
+                    <td><a href="/Expertise/UpdateExpertise/@expertise.ExpertiseId" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Expertise/DeleteExpertise/@expertise.ExpertiseId" class="btn btn-danger">Kaldır</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Expertise/CreateExpertise" class="btn btn-primary">Yeni Uzmanlık Ekle</a>
+
+</div>

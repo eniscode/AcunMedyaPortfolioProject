@@ -1,0 +1,52 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <!-- Ortalama işlemi -->
+
+    <table class="table table-bordered">
+        <!-- Excel tablosu gibi görünüm. -->
+        <thead>
+            <!-- Tablo başlıkları -->
+            <tr>
+                <!-- tr = satır -->
+                <th>Id</th><!-- th= Başlık etiketi  -->
+                <th> Başlık </th>
+                <th> Açıklama </th>
+                <th> İsim Soyisim </th>
+                <th> Resim </th>
+                <th> Meslek </th>
+
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <!-- Ana Kısım. -->
+            @foreach (var testimonial in Model)
+            {
+                <tr>
+                    <td> @testimonial.Id </td>
+                    <td> @testimonial.Title </td>
+                    <td> @testimonial.Comment </td>
+                    <td> @testimonial.NameSurname" </td>
+                    <td><img src="@testimonial.İmageUrl" class="img-thumbnail" width="100" /></td>
+                    <td> @testimonial.Job </td>
+
+                    <td> <a href="/Testimonial/UpdateTestimonial/@testimonial.Id" class="btn btn-success">Güncelle</a>
+                    <td>
+                    <td> <a href="/Testimonial/DeleteTestimonial/@testimonial.Id" class="btn btn-danger">Kaldır</a>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Testimonial/CreateTestimonial" class="btn btn-primary">Yeni Yorum Ekle </a>
+</div>
+
+
+

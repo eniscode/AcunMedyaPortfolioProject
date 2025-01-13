@@ -1,0 +1,87 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div style="display: flex; align-items: flex-start; gap: 30px; max-width: 1250px; padding: 20px; margin: 20px auto; background: #f4f4f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <!-- Fotoğraf -->
+    <div class="profile-photo" style="flex: 1; text-align:center;">
+        <img src="~/sidebar-01/images/WhatsApp Görsel 2025-01-13 saat 18.56.50_7a6b7282.jpg"
+             alt="Profil Fotoğrafı"
+             style="width: 200%; max-width: 1000px; height: 700px; margin-right: 250px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
+
+    <!-- Metinler -->
+    <div class="about-content" style="flex: 2; margin-left: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin-bottom: 20px;">Hakkımda</h1>
+        <p style="margin-bottom: 20px;">Merhaba! Ben Enis Buğra Akada, İstanbul Beykent Üniversitesi Bilgisayar mühendisliği 3. Sınıf öğrencisiyim. Teknolojiye olan ilgimle birlikte sürekli öğrenmeye ve projeler üretmeye devam ediyorum.</p>
+
+        <div class="about-details">
+            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #4CAF50; padding-bottom: 5px;">Ben Kimim?</h2>
+            <p style="margin-bottom: 20px;">
+                Üçüncü sınıf bilgisayar mühendisliği öğrencisiyim ve yazılım geliştirme, web teknolojileri,
+                algoritmalar üerine yoğunlaşıyorum.
+                Problem çözmeyi ve yeni teknolojiler öğrenmeyi çok seviyorum.
+            </p>
+
+            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #4CAF50; padding-bottom: 5px;">Hobilerim</h2>
+            <ul style="margin-bottom: 20px; padding-left: 20px; list-style-type: disc;">
+                <li>Kod yazmak ve yeni teknolojiler öğrenmek</li>
+                <li>Oyun oynamak ve oyun geliştirme</li>
+                <li>Doğa yürüyülerı ve fotoğrafçılık</li>
+            </ul>
+
+            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #4CAF50; padding-bottom: 5px;">Projelerim</h2>
+            <ul style="margin-bottom: 20px; padding-left: 20px; list-style-type: disc;">
+                <li>Portfolio Web Sitesi: React ve .NET kullanarak geliştirdiğim kişisel portföy sitesi.</li>
+                <li>Oyun Geliştirme Projesi: Unity kullanarak geliştirdiğim bir platform oyunu.</li>
+                <li>Yapay Zeka Projesi: Makine öğrenimi algoritmalarını kullanarak veri analizi projesi.</li>
+            </ul>
+
+            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #4CAF50; padding-bottom: 5px;">İletisim</h2>
+            <p>Eğer benimle iletişime geçmek isterseniz, <strong>[akadaenis@gmail.com]</strong> adresine ulaşabilirsiniz.</p>
+
+            <!-- CV İndir Butonu -->
+            <a href="/sidebar-01/Cv/CV.pdf" download="EnisBugraAkada_CV.pdf">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+                    CV'yi İndir
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sosyal Medya Ikonlari -->
+    <div style="flex: 0.5; display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <a href="https://linkedin.com" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: black;">
+            <img src="~/sidebar-01/images/LinkedIn.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/eniscode" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: black;">
+            <img src="~/sidebar-01/images/GitHub.png" alt="GitHub" style="width: 40px; height: 40px;">
+            <span>GitHub</span>
+        </a>
+        <a href="https://twitter.com" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: black;">
+            <img src="~/sidebar-01/images/TwitterX.png" alt="Twitter" style="width: 40px; height: 40px;">
+            <span>Twitter</span>
+        </a>
+    </div>
+</div>
+
+<!-- Ilham Verici Sözler -->
+<div style="margin-top: 30px; padding: 10px; background-color: #4CAF50; color: white; border-radius: 5px; text-align: center;">
+    <p id="quote" style="font-style: italic;">"Teknoloji ile her şey mümkün!"</p>
+    <script>
+        const quotes = [
+            "Teknoloji ile her şey mümkün!",
+            "Başarı, sürekli gelişimin bir sonucudur.",
+            "Kod yazmak, yaratmanın yeni biçimidir.",
+            "Hatalar öğrenmenin en iyi yoludur."
+        ];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % quotes.length;
+            document.getElementById('quote').innerText = quotes[index];
+        }, 5000);
+    </script>
+</div>

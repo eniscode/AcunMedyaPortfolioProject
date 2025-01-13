@@ -1,0 +1,48 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Proje Listesi</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th> Proje İsmi </th>
+                <th> Kategori İsmi </th>
+                <th> Kapak Resmi </th>
+                <th> Açıklama </th>
+                <th> Proje Linki </th>
+                <th> Güncelle </th>
+                <th> Kaldır </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var project in Model)
+            {
+                <tr>
+                    <td> @project.Id </td>
+                    <td> @project.Name </td>
+                    <td> @project.Category.Name </td>
+                    <td><img src="@project.ConvertİmageUrl" class="img-thumbnail" width="100" /></td>
+                    <td> @project.Description </td>
+                    <td>
+                        <a href="https://github.com/eniscode" target="_blank">GitHub Proje Linki</a>
+                    </td>
+                    <td> <a href="/Project/UpdateProject/@project.Id" class="btn btn-success">Güncelle</a>
+                    <td>
+                    <td> <a href="/Project/DeleteProject/@project.Id" class="btn btn-danger">Kaldır</a>
+                    <td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   
+    <a href="/Project/CreateProject" class="btn btn-primary">Yeni Proje Ekle </a>
+</div>
