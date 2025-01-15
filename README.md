@@ -51,5 +51,10 @@ Veriler **veritabanından dinamik** olarak çekilmekte ve panel üzerinden eklem
 ---
 
 ## 📂 Proje Görselleri 
-![![image](https://github.com/user-attachments/assets/216fb68c-77ad-453b-b77d-23755cb179b9)
-]
+![image](https://github.com/user-attachments/assets/216fb68c-77ad-453b-b77d-23755cb179b9)
+![image](https://github.com/user-attachments/assets/9b276630-ec30-4d77-b314-310c8ca93ec1)
+![image](https://github.com/user-attachments/assets/6dba6200-2ea4-4052-85e7-034372984ff8)
+![image](https://github.com/user-attachments/assets/51d5f665-7272-4637-8ac7-06ceff30f10d)
+
+
+
